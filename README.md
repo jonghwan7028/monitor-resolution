@@ -21,3 +21,14 @@ sudo xrandr --output VGA-1 --mode "1920x1080_60.00"
 우분투 18.04는 startup applicatrion preference 에서 이 기능을 제공한다. 이 앱을 실행하면 창이 나오는데
 * add 
 * command 에  xrandr --output VGA-1 --mode "1920x1080_60.00"을 추가하면 된다.
+
+혹은 아래의 명령어를 통해 위의 명령어를 profile 에 다 넣으면 된다.
+```
+gedit ~/.profile
+
+# 넣기
+xrandr --newmode "1920x1080_60.00"
+xrandr --addmode VGA-1 "1920x1080_60.00"
+xrandr --output VGA-1 --mode "1920x1080_60.00"
+```
+
